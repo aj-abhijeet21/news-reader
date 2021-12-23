@@ -5,14 +5,7 @@ class Article {
   late String url;
   late String imageUrl;
   late String content;
-
-  // Article(
-  //     {required this.author,
-  //     required this.title,
-  //     required this.description,
-  //     required this.imageUrl,
-  //     required this.url,
-  //     required this.content});
+  late String date;
 
   Article.fromJson(Map json) {
     author = json['author'] ?? 'Anonymous';
@@ -21,5 +14,6 @@ class Article {
     imageUrl = json['urlToImage'] ?? 'assets/images/no-image-available.jpg';
     url = json['url'];
     content = json['content'] ?? 'Not available';
+    date = json['publishedAt'];
   }
 }
